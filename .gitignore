@@ -1,0 +1,11 @@
+*.class
+pessoa.csv
+*.jar
+.classpath
+.project
+*/.settings
+*.org.eclipse.jdt.core.prefs
+/bin/
+/target/
+*.eclipse.ltk.core.refactoring.prefs
+/.settings/
