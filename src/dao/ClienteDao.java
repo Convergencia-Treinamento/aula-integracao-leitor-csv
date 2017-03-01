@@ -11,7 +11,7 @@ public class ClienteDao {
 	Cliente c = new Cliente();
 
 	private static final String DRIVER = "org.postgresql.Driver";
-	private static final String PASSWORD = "mctavish";
+	private static final String PASSWORD = "";
 	private static final String USER = "postgres";
 	private static final String URL = "jdbc:postgresql:excel";
 
@@ -28,6 +28,8 @@ public class ClienteDao {
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		}finally{
+			pstmt.close;
 		} 
 	}
 }
