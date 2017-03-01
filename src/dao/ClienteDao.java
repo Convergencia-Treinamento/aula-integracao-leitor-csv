@@ -24,7 +24,6 @@ public class ClienteDao {
 			pstmt.setString(2, c.getNome());
 			pstmt.setString(3, c.getCpfcnpj());
 			pstmt.execute();
-			pstmt.close();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
