@@ -1,0 +1,3 @@
+projectKey=aula-integracao-leitor-csv
+serverUrl=http://ci.convergencia.io/sonar
+dashboardUrl=http://ci.convergencia.io/sonar/dashboard/index/aula-integracao-leitor-csv
