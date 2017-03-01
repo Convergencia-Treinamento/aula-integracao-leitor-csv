@@ -29,7 +29,7 @@ public class ClienteDao {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}finally{
-			pstmt.close;
+			pstmt.close();
 		} 
 	}
 }
