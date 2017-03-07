@@ -8,8 +8,8 @@ import model.Cliente;
 
 public class ClienteController {
     public static void main(String[] args) throws Exception {
-        String[] clientes = null;
-        String linha  = null;
+        String[] clientes;
+        String linha;
         Cliente c = new Cliente();
         ClienteDao cliDao = new ClienteDao();
 
@@ -23,7 +23,6 @@ public class ClienteController {
             c.setCpfcnpj(clientes[2]);
             cliDao.inserir(c);
             i++;
-            System.out.println("Foram cadastradas " + i + " colunas");
         }
         reader.close();
     }

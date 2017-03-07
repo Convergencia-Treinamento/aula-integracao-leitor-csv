@@ -1,4 +1,5 @@
 package dao;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -15,8 +16,8 @@ public class ClienteDao {
     private static final String USER = "postgres";
     private static final String URL = "jdbc:postgresql:excel";
 
-    public void inserir(Cliente c) throws ClassNotFoundException, SQLException{
-        try (Connection con =  DriverManager.getConnection(URL, USER, PASSWORD);) {
+    public void inserir(Cliente c) throws SQLException {
+        try (Connection con = DriverManager.getConnection(URL, USER, PASSWORD);) {
 
             Class.forName(DRIVER);
             PreparedStatement pstmt = con.prepareStatement("insert into pessoa(id, nome, cpfcnpj) values (?, ?, ?) ");
@@ -25,8 +26,8 @@ public class ClienteDao {
             pstmt.setString(3, c.getCpfcnpj());
             pstmt.execute();
 
-        } catch (Exception e) {
+        } catch (ClassNotFoundException ex) {
             Logger.getLogger(ClienteDao.class.getName()).log(Level.SEVERE, null, ex);
-        } 
+        }
     }
 }
