@@ -28,6 +28,8 @@ public class ClienteDao {
 
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(ClienteDao.class.getName()).log(Level.SEVERE, null, ex);
+        }finally{
+            pstmt.close();
         }
     }
 }
