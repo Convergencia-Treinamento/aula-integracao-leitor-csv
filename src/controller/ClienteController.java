@@ -14,7 +14,6 @@ public class ClienteController {
         ClienteDao cliDao = new ClienteDao();
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream("C:\\pessoa.csv")));
-        int i = 0;
         while ((linha = reader.readLine()) != null) {
             clientes = linha.split("[|]");
 
@@ -22,7 +21,6 @@ public class ClienteController {
             c.setNome(clientes[1]);
             c.setCpfcnpj(clientes[2]);
             cliDao.inserir(c);
-            i++;
         }
         reader.close();
     }
